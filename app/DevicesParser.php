@@ -25,8 +25,8 @@ class DevicesParser
         $devices = explode(PHP_EOL . PHP_EOL, file_get_contents(static::DEVICES_PATH));
 
         foreach ($devices as $device) {
-            if (preg_match('/^H: Handlers=js\d+ event(\d+)/m', $device, $matches)) {
-                $event  = (int) $matches[1];
+            if (preg_match('/^H: Handlers=(?:js\d+ event(\d+)|event(\d+) js\d+)/m', $device, $matches)) {
+                $event  = (int) ($matches[2] ?? $matches[1]);
                 $data   = [];
                 $params = explode(PHP_EOL, $device);
 
