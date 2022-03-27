@@ -1,46 +1,17 @@
 # retropie-gamepads-switch
 
+Tested on Raspberry Ri 4 - RetroPie 4.7.1|4.8
+
 ## Installation guide
 
 ```
 cd ~/
-sudo apt install php7.3-cli composer
 git clone https://github.com/grungestranger/retropie-gamepads-switch.git
-cd retropie-gamepads-switch
-composer du
-cp config.example.php config.php
+sh retropie-gamepads-switch/install.sh
 ```
 
 ### Enter your data in the configuration file
 
 ```
-nano config.php
-```
-
-### Add script launch to onstart script
-
-```
-nano /opt/retropie/configs/all/runcommand-onstart.sh
-```
-
-#### Insert the code
-
-```
-#!/bin/bash
-
-sudo php /home/pi/retropie-gamepads-switch/onstart.php "$1"
-```
-
-### Add script launch to onend script
-
-```
-nano /opt/retropie/configs/all/runcommand-onend.sh
-```
-
-#### Insert the code
-
-```
-#!/bin/bash
-
-sudo php /home/pi/retropie-gamepads-switch/onend.php "$1"
+nano retropie-gamepads-switch/config.php
 ```

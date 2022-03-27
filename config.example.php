@@ -15,13 +15,14 @@ return [
 
     'gamepads' => [
         1 => 'Sony Interactive Entertainment Controller',
-        2 => '8BitDo M30 gamepad',
-        3 => [
+        2 => 'Pro Controller',
+        3 => '8BitDo M30 gamepad',
+        4 => 'PG-9062S',
+        5 => [
             'uniq' => '04:e8:a7:ab:63:25',
             'name' => 'Sony PLAYSTATION(R)3 Controller',
         ],
-        4 => 'Sony PLAYSTATION(R)3 Controller',
-        5 => 'PG-9062S',
+        6 => 'Sony PLAYSTATION(R)3 Controller',
     ],
 
     /*
@@ -34,14 +35,18 @@ return [
     */
 
     'gamepads_by_systems' => [
-        'nes'          => [1, 2],
-        'fds'          => [1, 2],
-        'snes'         => [1, 2],
+        'atari2600'    => [4, 5],
+        'atari7800'    => [1, 2],
+        'nes'          => [2, 1],
+        'fds'          => [2, 1],
+        'snes'         => [1, 3],
         'mastersystem' => [1, 2],
-        'megadrive'    => [2, 1],
-        'sega32x'      => [2, 1],
-        'psx'          => [3, 4],
-        'n64'          => [5, 3],
+        'megadrive'    => [3, 1],
+        'sega32x'      => [3, 1],
+        'segacd'       => [3, 1],
+        'psx'          => [5, 6],
+        'n64'          => [4, 5],
+        'dreamcast'    => [4, 5],
     ],
 
     /*
